@@ -12,7 +12,7 @@ task deploy => sub {
 
 	file $build_dir, ensure => 'directory';
 	sync_up $cwd, $build_dir, {
-		exclude => [qw(.* *.db t sqitch* Rexfile*)]
+		exclude => [qw(.* local *.db t sqitch* Rexfile*)]
 	};
 };
 
