@@ -1,8 +1,15 @@
 {
-	'+modules' => [qw(Logger::Simple)],
+	'+modules' => [qw(Logger::Simple Storage::Abstract)],
 	modules_init => {
 		Routes => {
 			base => 'BrulionAPI',
+		},
+		'Storage::Abstract' => {
+			driver => 'directory',
+			directory => 'public',
+			public_routes => {
+				'/public' => '/',
+			},
 		},
 	},
 
