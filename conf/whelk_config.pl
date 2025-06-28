@@ -4,12 +4,17 @@
 		Routes => {
 			base => 'BrulionAPI',
 		},
+
 		'Storage::Abstract' => {
 			driver => 'directory',
 			directory => 'public',
 			public_routes => {
 				'/public' => '/',
 			},
+		},
+
+		'Logger::Simple' => {
+			stdout => 1,
 		},
 	},
 
