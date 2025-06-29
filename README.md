@@ -17,3 +17,7 @@ carmel install
 carmel exec plackup
 ```
 
+## License
+
+BSD 2-clause license - see LICENSE.
+
